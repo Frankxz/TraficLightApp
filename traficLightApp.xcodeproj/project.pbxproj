@@ -11,6 +11,8 @@
 		C6C3DEC826E8E39500EC9BF6 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6C3DEC726E8E39500EC9BF6 /* ContentView.swift */; };
 		C6C3DECA26E8E39600EC9BF6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C6C3DEC926E8E39600EC9BF6 /* Assets.xcassets */; };
 		C6C3DECD26E8E39600EC9BF6 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C6C3DECC26E8E39600EC9BF6 /* Preview Assets.xcassets */; };
+		C6C3DED526E8E57B00EC9BF6 /* LightCircle.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6C3DED426E8E57B00EC9BF6 /* LightCircle.swift */; };
+		C6C3DED726E8EEDF00EC9BF6 /* StartButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6C3DED626E8EEDF00EC9BF6 /* StartButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +22,8 @@
 		C6C3DEC926E8E39600EC9BF6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C6C3DECC26E8E39600EC9BF6 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		C6C3DECE26E8E39600EC9BF6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C6C3DED426E8E57B00EC9BF6 /* LightCircle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LightCircle.swift; sourceTree = "<group>"; };
+		C6C3DED626E8EEDF00EC9BF6 /* StartButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +58,8 @@
 			children = (
 				C6C3DEC526E8E39500EC9BF6 /* traficLightAppApp.swift */,
 				C6C3DEC726E8E39500EC9BF6 /* ContentView.swift */,
+				C6C3DED626E8EEDF00EC9BF6 /* StartButton.swift */,
+				C6C3DED426E8E57B00EC9BF6 /* LightCircle.swift */,
 				C6C3DEC926E8E39600EC9BF6 /* Assets.xcassets */,
 				C6C3DECE26E8E39600EC9BF6 /* Info.plist */,
 				C6C3DECB26E8E39600EC9BF6 /* Preview Content */,
@@ -140,6 +146,8 @@
 			files = (
 				C6C3DEC826E8E39500EC9BF6 /* ContentView.swift in Sources */,
 				C6C3DEC626E8E39500EC9BF6 /* traficLightAppApp.swift in Sources */,
+				C6C3DED726E8EEDF00EC9BF6 /* StartButton.swift in Sources */,
+				C6C3DED526E8E57B00EC9BF6 /* LightCircle.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
