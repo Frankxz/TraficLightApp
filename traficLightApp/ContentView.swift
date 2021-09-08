@@ -17,8 +17,9 @@ struct ContentView: View {
     
     var body: some View {
         ZStack {
-            Rectangle() // Не знал как по другому задать цвет фона
-                .ignoresSafeArea()
+           // Не знал как по другому задать цвет фона надеюсь правильно сделал
+            Color.black
+            .ignoresSafeArea()
             VStack {
                 redLight
                 yellowLight
@@ -44,7 +45,7 @@ struct ContentView: View {
     }
     
     private func switching(){
-        //Пытался тут как то все оптимизировать чтобы упростить код но так и не додумался
+        //Пытался тут как то все оптимизировать чтобы упростить код но так и не додумался сделать все нормально
         buttonlabel = "Next"
         
         if !redLight.isOn && !yellowLight.isOn {
