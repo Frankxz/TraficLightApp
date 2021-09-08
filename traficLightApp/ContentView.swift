@@ -11,61 +11,69 @@ import SwiftUI
 struct ContentView: View {
     @State var buttonlabel = "Start"
     
-    @State var redLight = LightCircle(color: .red)
-    @State var yellowLight = LightCircle(color: .yellow)
-    @State var greenLight = LightCircle(color: .green)
+    @State  var redLight = LightCircle(color: .red)
+    @State  var yellowLight = LightCircle(color: .yellow)
+    @State  var greenLight = LightCircle(color: .green)
     
-    private let lightOn = 1.0
-    private let lightOff = 0.3
     var body: some View {
         ZStack {
-            Rectangle()
-                .foregroundColor(.black)
+            Rectangle() // Не знал как по другому задать цвет фона
                 .ignoresSafeArea()
             VStack {
                 redLight
                 yellowLight
                 greenLight
-            Spacer()
-            
-            Button(action: {
-                    buttonlabel = "Next"
-                if !redLight.isOn && !yellowLight.isOn {
-                    greenLight.isOn = false
-                    greenLight.currentLight = lightOff
-                    redLight.isOn = true
-                    redLight.currentLight = lightOn
-                } else if !yellowLight.isOn {
-                    redLight.isOn = false
-                    redLight.currentLight = lightOff
-                    yellowLight.isOn = true
-                    yellowLight.currentLight = lightOn
-                } else {
-                    yellowLight.isOn = false
-                    yellowLight.currentLight = lightOff
-                    greenLight.isOn = true
-                    greenLight.currentLight = lightOn
-                }
-                },
-                label: {
-                    Text(buttonlabel).font(.title)
-                        .fontWeight(.semibold)
-                        .foregroundColor(Color.white)
-                        .frame(width: 150.0, height: 50.0)
-                        .background(Color.blue)
-                        .clipShape(Capsule())
-                        .overlay(Capsule()
-                        .stroke(Color.white, lineWidth: 5))
-                })
-            .padding()
-            }.background(Color.black)
-             .ignoresSafeArea()
-             .padding(.top)
-         }
+                
+                Spacer()
+                
+                Button(action: switching, label: getButtonLabel)
+                    .padding()
+            }
+        }
     }
     
-}
+    private func getButtonLabel() -> some View {
+        Text(buttonlabel).font(.title)
+            .fontWeight(.semibold)
+            .foregroundColor(Color.white)
+            .frame(width: 150.0, height: 50.0)
+            .background(Color.blue)
+            .clipShape(Capsule())
+            .overlay(Capsule()
+                        .stroke(Color.white, lineWidth: 5))
+    }
     
+    private func switching(){
+        //Пытался тут как то все оптимизировать чтобы упростить код но так и не додумался
+        buttonlabel = "Next"
+        
+        if !redLight.isOn && !yellowLight.isOn {
+            greenLight = toggle(light: greenLight, turnOn: false)
+            redLight = toggle(light: redLight, turnOn: true)
+        }else if !yellowLight.isOn {
+            redLight = toggle(light: redLight, turnOn: false)
+            yellowLight = toggle(light: yellowLight, turnOn: true)
+        } else {
+            yellowLight = toggle(light: yellowLight, turnOn: false)
+            greenLight = toggle(light: greenLight, turnOn: true)
+        }
+    }
+    
+    private func toggle(light: LightCircle, turnOn: Bool) -> LightCircle {
+        var light = light
+        let lightOn = 1.0, lightOff = 0.3
+        
+        if !turnOn {
+            light.isOn = false
+            light.currentLight = lightOff
+        } else {
+            light.isOn = true
+            light.currentLight = lightOn
+        }
+        return light
+    }
+}
+
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
