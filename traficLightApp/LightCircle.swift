@@ -8,15 +8,13 @@
 import SwiftUI
 
 struct LightCircle: View {
-    var color: Color
-    var currentLight = 0.3
-    
-    var isOn = false
+    let color: Color
+    let isOn: Bool
     
     var body: some View {
         Circle()
         .frame(width: 125, height: 125)
-        .foregroundColor(color.opacity(currentLight))
+            .foregroundColor(color.opacity(isOn ? 1 : 0.3))
         .overlay(Circle()
         .stroke(Color.white, lineWidth: 5))
         .padding()
@@ -26,6 +24,6 @@ struct LightCircle: View {
 
 struct LightCircle_Previews: PreviewProvider {
     static var previews: some View {
-        LightCircle(color: Color.blue)
+        LightCircle(color: Color.blue, isOn: false)
     }
 }
