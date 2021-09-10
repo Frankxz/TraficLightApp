@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C6545E1426EB964C00E32B97 /* SwitchColorButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6545E1326EB964C00E32B97 /* SwitchColorButton.swift */; };
 		C6C3DEC626E8E39500EC9BF6 /* traficLightAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6C3DEC526E8E39500EC9BF6 /* traficLightAppApp.swift */; };
 		C6C3DEC826E8E39500EC9BF6 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6C3DEC726E8E39500EC9BF6 /* ContentView.swift */; };
 		C6C3DECA26E8E39600EC9BF6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C6C3DEC926E8E39600EC9BF6 /* Assets.xcassets */; };
@@ -15,6 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C6545E1326EB964C00E32B97 /* SwitchColorButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwitchColorButton.swift; sourceTree = "<group>"; };
 		C6C3DEC226E8E39500EC9BF6 /* traficLightApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = traficLightApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C6C3DEC526E8E39500EC9BF6 /* traficLightAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = traficLightAppApp.swift; sourceTree = "<group>"; };
 		C6C3DEC726E8E39500EC9BF6 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -56,6 +58,7 @@
 			children = (
 				C6C3DEC526E8E39500EC9BF6 /* traficLightAppApp.swift */,
 				C6C3DEC726E8E39500EC9BF6 /* ContentView.swift */,
+				C6545E1326EB964C00E32B97 /* SwitchColorButton.swift */,
 				C6C3DED426E8E57B00EC9BF6 /* LightCircle.swift */,
 				C6C3DEC926E8E39600EC9BF6 /* Assets.xcassets */,
 				C6C3DECE26E8E39600EC9BF6 /* Info.plist */,
@@ -144,6 +147,7 @@
 				C6C3DEC826E8E39500EC9BF6 /* ContentView.swift in Sources */,
 				C6C3DEC626E8E39500EC9BF6 /* traficLightAppApp.swift in Sources */,
 				C6C3DED526E8E57B00EC9BF6 /* LightCircle.swift in Sources */,
+				C6545E1426EB964C00E32B97 /* SwitchColorButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

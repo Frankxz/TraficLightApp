@@ -9,11 +9,11 @@ import SwiftUI
 
 
 struct ContentView: View {
-    @State var buttonlabel = "Start"
+    @State private var buttonTitle = "Start"
     
-    @State var redLight = false
-    @State var yellowLight = false
-    @State var greenLight = false
+    @State private var redLight = false
+    @State private var yellowLight = false
+    @State private var greenLight = false
     
     var body: some View {
         ZStack {
@@ -23,28 +23,14 @@ struct ContentView: View {
                 LightCircle(color: .red, isOn: redLight)
                 LightCircle(color: .orange, isOn: yellowLight)
                 LightCircle(color: .green, isOn: greenLight)
-                
                 Spacer()
-                
-                Button(action: switching, label: getButtonLabel)
-                    .frame(width: 150.0, height: 50.0)
-                    .background(Color.blue)
-                    .clipShape(Capsule())
-                    .overlay(Capsule()
-                    .stroke(Color.white, lineWidth: 5))
-                    .padding()
+                SwitchColorButton(title: buttonTitle, action: switching)
             }
         }
     }
     
-    private func getButtonLabel() -> some View {
-        Text(buttonlabel).font(.title)
-            .fontWeight(.semibold)
-            .foregroundColor(Color.white)
-    }
-    
     private func switching(){
-        buttonlabel = "Next"
+        buttonTitle = "Next"
         if !redLight && !yellowLight {
             greenLight = false
             redLight = true
