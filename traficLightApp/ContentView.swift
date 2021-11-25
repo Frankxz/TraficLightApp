@@ -18,7 +18,7 @@ struct ContentView: View {
     var body: some View {
         ZStack {
             Color.black
-            .ignoresSafeArea()
+                .ignoresSafeArea()
             VStack {
                 LightCircle(color: .red, isOn: redLight)
                 LightCircle(color: .orange, isOn: yellowLight)

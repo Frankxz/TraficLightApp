@@ -19,9 +19,7 @@ struct SwitchColorButton: View {
         }
         .frame(width: 150.0, height: 50.0)
         .background(Color.blue)
-        .clipShape(Capsule())
-        .overlay(Capsule()
-        .stroke(Color.white, lineWidth: 5))
+        .cornerRadius(10)
         .padding()
     }
 }
