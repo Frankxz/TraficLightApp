@@ -1,5 +1,7 @@
 
-# TraficLightApp on SwiftUI
+# TraficLightApp
+
+**SwiftUI**
 
 **Training app** \
 My first simple app on SwiftUI.
